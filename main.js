@@ -1,6 +1,9 @@
 // GET REQUEST
 function getTodos() {
-  console.log('GET Request');
+  axios
+    .get('https://jsonplaceholder.typicode.com/todos?_limit==5')
+    .then(res=>showOutput(res))
+    .catch(err=>console.log(err));
 }
 
 // POST REQUEST
